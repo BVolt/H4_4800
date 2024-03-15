@@ -23,7 +23,11 @@ public class MacronutrientFactory {
         Carb carb = carbFactory.createCarb(dietPlan);
         Fat fat = fatFactory.createFat(dietPlan);
 
-        return new Meal(protein, carb, fat);
+        return new Meal.Builder()
+                .setProtein(protein)
+                .setCarb(carb)
+                .setFat(fat)
+                .createMeal();
     }
 
 }

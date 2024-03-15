@@ -1,9 +1,6 @@
 package PizzaChains;
 import PizzaChains.Pizza.*;
 
-/*
-* -Their own class or in constructor
-* */
 
 public class Driver {
 

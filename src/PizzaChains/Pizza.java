@@ -45,35 +45,23 @@ public class Pizza {
         }
 
         public Pizza createPizza() throws IllegalStateException{
+            if(pizzaChain == null)
+                throw new IllegalStateException("Pizza Chain is required");
             if(size == null)
                 throw new IllegalStateException("Pizza Size is required");
+
             return new Pizza(pizzaChain, size, toppings);
         }
 
     }
 
     public enum Size{
-        Small,
-        Medium,
-        Large
+        Small, Medium, Large
     }
 
     public enum Topping{
-        Pepperoni,
-        Sausage,
-        Mushrooms,
-        Bacon,
-        Onions,
-        ExtraCheese,
-        Peppers,
-        Chicken,
-        Olives,
-        Spinach,
-        TomatoBasil,
-        Beef,
-        Ham,
-        Pesto,
-        SpicyPork,
-        HamPineapple
+        Pepperoni, Sausage, Mushrooms, Bacon, Onions, ExtraCheese,
+        Peppers, Chicken, Olives, Spinach, TomatoBasil, Beef,
+        Ham, Pesto, SpicyPork, HamPineapple
     }
 }
