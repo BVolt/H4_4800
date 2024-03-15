@@ -20,6 +20,7 @@ public class Customer {
     }
 
     public void displayMeal(){
+        System.out.println(this.name + ", " + this.dietPlan);
         System.out.println(this.meal);
     }
 
@@ -40,22 +41,6 @@ public class Customer {
         public Customer createCustomer(){
             return new Customer(this.name, this.dietPlan);
         }
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public DietPlan getDietPlan() {
-        return dietPlan;
-    }
-
-    public void setDietPlan(DietPlan dietPlan) {
-        this.dietPlan = dietPlan;
     }
 }
 
